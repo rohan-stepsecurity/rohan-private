@@ -1,0 +1,27 @@
+project_name: myapp
+
+release:
+  github:
+    owner: yourusername         # GitHub owner of the public repository (target repo)
+    name: public-repo           # Name of the public repository where releases are published
+
+builds:
+  - binary: myapp
+    main: .
+    goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - amd64
+      - arm64
+
+archives:
+  - format: zip
+    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+
+checksum:
+  name_template: "checksums.txt"
+
+changelog:
+  use: git
