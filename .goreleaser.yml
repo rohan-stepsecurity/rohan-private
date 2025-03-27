@@ -1,10 +1,14 @@
+version: 2
 project_name: myapp
+
+source:
+  enabled: false
 
 release:
   github:
     owner: rohan-stepsecurity         # GitHub owner of the public repository (target repo)
     name: rohan-pg           # Name of the public repository where releases are published
-
+  
 builds:
   - binary: myapp
     main: .
