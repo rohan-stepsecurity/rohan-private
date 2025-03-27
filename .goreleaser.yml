@@ -2,8 +2,8 @@ project_name: myapp
 
 release:
   github:
-    owner: yourusername         # GitHub owner of the public repository (target repo)
-    name: public-repo           # Name of the public repository where releases are published
+    owner: rohan-stepsecurity         # GitHub owner of the public repository (target repo)
+    name: rohan-pg           # Name of the public repository where releases are published
 
 builds:
   - binary: myapp
